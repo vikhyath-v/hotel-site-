@@ -5,120 +5,8 @@
   <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Table Reservation Form</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-      font-family: oswald;
-    }
-    
-    .container {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #fff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      border-radius: 5px;
-    }
-
-    h1 {
-      text-align: center;
-      color: #333;
-    }
-
-    form {
-      margin-top: 20px;
-      font-family: oswald;
-
-    }
-
-    label {
-      display: block;
-      font-weight: bold;
-      margin-top: 10px;
-    }
-
-    input[type="text"],
-    input[type="number"],
-    input[type="date"],
-    input[type="tel"],
-    input[type="email"] {
-      width: 95%;
-      padding: 10px;
-      margin-top: 5px;
-      margin-bottom: 10px;
-      margin-right: 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-
-    input[type="submit"] {
-      background-color: #333;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    input[type="submit"]:hover {
-      background-color: #ba5454;
-     
-    }
-    #one{
-    font-family: oswald;
-    background-color: red;
-    text-align: center;
-    text-decoration: none;
-    
-    
-}@font-face {
-            font-family: 'oswald';
-            src: url('Oswald-VariableFont_wght.ttf');
-            font-family:'summer';
-            src: url('/Summer\ Dream\ Sans\ DEMO\ .ttf');
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-        }
-
-        #one {
-            font-family: oswald;
-            background-color: #333;
-            text-align: center;
-            color: #fff;
-            padding: 20px;
-        }
-        #one img{
-            height: 100px;
-
-        }
-
-        #one h1 {
-            font-size: 50px;
-            color: #ccc;
-            font-family: summer;
-        }
-
-        #two {
-            display: flex;
-            justify-content: space-between;
-            background-color: #444;
-            padding: 5px;
-            border-radius: 10px;
-        }
-
-        #two a {
-            text-decoration: none;
-            color: #fff;
-            padding: 10px 20px;
-        } 
-      
-  </style>
+  <link  href="style1.css" rel="stylesheet">
+  
 </head>
 <body>
     <div id="one">
@@ -127,13 +15,13 @@
 
     <div id="two">
         
-            <h2><a href="index.html">Home</a></h2>
-            <h2><a href="registration.html">Registration</a></li></h2>
-                        <h2><a href="gal.html"> Gallery</a></li></h2>
+            <h2><a href="index.html" id="home">HOME</a></h2>
+            <h2><a href="reg.html">REGISTRATION</a></li></h2>
+                        <h2><a href="gal.html"> GALLERY</a></li></h2>
         
     </div>
     </div>
-<form action="phpend.php" method="POST">
+<form action="/auth" method="POST">
   <div class="container">
     <h1>ENTER YOUR DETAILS</h1>
    
@@ -164,60 +52,10 @@ Number of People:
       event.preventDefault(); // Prevent the default form submission
       document.getElementById("confirmation").style.display = "block"; // Display the confirmation message
     });
-  </script>
-  <script>
-    
-    function onHover(element) {
-      element.style.backgroundColor = "#eee";
-    }
-  
 
-    function onBlur(element) {
-      element.style.backgroundColor = "#fff";
-    }
-  
-    
-    document.getElementById("name").addEventListener("mouseover", function() {
-      onHover(this);
-    });
-    document.getElementById("name").addEventListener("mouseout", function() {
-      onBlur(this);
-    });
-  
-    document.getElementById("party-size").addEventListener("mouseover", function() {
-      onHover(this);
-    });
-    document.getElementById("party-size").addEventListener("mouseout", function() {
-      onBlur(this);
-    });
-  
-    document.getElementById("date").addEventListener("mouseover", function() {
-      onHover(this);
-    });
-    document.getElementById("date").addEventListener("mouseout", function() {
-      onBlur(this);
-    });
-  
-    document.getElementById("phone").addEventListener("mouseover", function() {
-      onHover(this);
-    });
-    document.getElementById("phone").addEventListener("mouseout", function() {
-      onBlur(this);
-    });
-  
-    document.getElementById("email").addEventListener("mouseover", function() {
-      onHover(this);
-    });
-    document.getElementById("email").addEventListener("mouseout", function() {
-      onBlur(this);
-    });
-  
-    // Add blur event listener for form submission
-    document.getElementById("reservation-form").addEventListener("submit", function(event) {
-   
 
-    });
   </script>
   
+  <script src="/regscript.js"></script>
 </body>
 </html>
