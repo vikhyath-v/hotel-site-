@@ -59,20 +59,14 @@
       border: none;
       border-radius: 4px;
       cursor: pointer;
+      font-family:oswald ;
     }
 
     input[type="submit"]:hover {
       background-color: #ba5454;
      
     }
-    #one{
-    font-family: oswald;
-    background-color: red;
-    text-align: center;
-    text-decoration: none;
-    
-    
-}@font-face {
+ @font-face {
             font-family: 'oswald';
             src: url('Oswald-VariableFont_wght.ttf');
             font-family:'summer';
@@ -82,15 +76,15 @@
         body {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+           
             background-color: #f0f0f0;
         }
 
         #one {
-            font-family: oswald;
-            background-color: #333;
+          font-family: oswald;
+            background-color:  #11201e;
             text-align: center;
-            color: #fff;
+            color: #d5e9dd ;
             padding: 20px;
         }
         #one img{
@@ -105,11 +99,13 @@
         }
 
         #two {
-            display: flex;
+          display: flex;
             justify-content: space-between;
-            background-color: #444;
+            align-items: center;
+            background-color:   #154042 ;
             padding: 5px;
             border-radius: 10px;
+            height: 10.5vh;
         }
 
         #two a {
@@ -117,7 +113,11 @@
             color: #fff;
             padding: 10px 20px;
         } 
+        
+      #home:hover{
       
+        color: #000000;
+      }
   </style>
 </head>
 <body>
@@ -127,13 +127,13 @@
 
     <div id="two">
         
-            <h2><a href="index.html">Home</a></h2>
-            <h2><a href="registration.html">Registration</a></li></h2>
-                        <h2><a href="gal.html"> Gallery</a></li></h2>
+            <h2><a href="index.html" id="home">HOME</a></h2>
+            <h2><a href="reg.html">REGISTRATION</a></li></h2>
+                        <h2><a href="gal.html"> GALLERY</a></li></h2>
         
     </div>
     </div>
-<form action="phpend.php" method="POST">
+<form action="/auth" method="POST">
   <div class="container">
     <h1>ENTER YOUR DETAILS</h1>
    
@@ -164,6 +164,8 @@ Number of People:
       event.preventDefault(); // Prevent the default form submission
       document.getElementById("confirmation").style.display = "block"; // Display the confirmation message
     });
+
+
   </script>
   <script>
     

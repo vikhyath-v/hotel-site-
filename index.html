@@ -19,9 +19,16 @@
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
         }
-
+        .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
         #one {
-            font-family: oswald;
+          font-family: oswald;
             background-color:  #11201e;
             text-align: center;
             color: #d5e9dd ;
@@ -38,12 +45,15 @@
         }
 
         #two {
-            display: flex;
+          display: flex;
             justify-content: space-between;
+            align-items: center;
             background-color:   #154042 ;
             padding: 5px;
             border-radius: 10px;
+            height: 10.5vh;
         }
+
 
         #two a {
             text-decoration: none;
@@ -55,6 +65,10 @@
             background-color: #d5e9dd ;
             padding: 20px;
             color:#333;
+            margin: -50px,-50px, -50px,-50px;
+            font-size: 25px;
+            font-family: summer;
+            text-align: center;
         }
 
         #videos video {
@@ -67,7 +81,39 @@
     a:hover{
         color:crimson;
     }
+.slidewrapper{
+position: relative;
+max-width: 96rem;
+margin: 0 auto;
+}
+.slider{
+    display:flex;
+    aspect-ratio: 16/9;
+    overflow-y:auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+.slidernav{
+    display: flex;
+    column-gap: rem;
+    position: absolute;
+    bottom: 1.25em;
 
+}
+.vidcontainer {
+            overflow: hidden;
+            width: 100%;
+            max-width: 96rem;
+            margin: 0 auto;
+        }
+        .vidslides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .vidslide {
+            flex: 0 0 100%;
+    
+        }
     </style>
 </head>
 <body>
@@ -78,28 +124,44 @@
         <a href="index.html"><h2>HOME</h2></a>
        <a href="reg.html"> <h2>REGISTRATION</h2></a>
        <a href="gal.html"><h2>GALLERY</h2></a>
- 
+    </div>
     </div> 
+    <div class="vidcontainer">
+        <div class="vidslides">
+            <video class="vidslide" src="1.mp4" autoplay loop muted></video>
+            <video class="vidslide" src="2.mp4" autoplay loop muted></video>
+            <video class="vidslide" src="3.mp4" autoplay loop muted></video>
+            <video class="vidslide" src="4.mp4" autoplay loop muted></video>
+        </div>
+    </div>
+    <button id="prev">Previous</button>
+    <button id="next">Next</button>
 
-<div id="videos">
-    <h1>
-        EXPERIENCE
-     </h1>
-     <video src="/2.mp4" autoplay loop></video>
-     <H1>
-        LIFE
-     </H1>
-     <video src="/1.mp4" autoplay loop></video>
- <h1>
-    LIKE 
- </h1>
-     <video src="/3.mp4" autoplay loop></video>
-<h1>
-    NEVER BEFORE
-</h1>
-    <video src="/4.mp4" autoplay loop></video>
+    <script>
+        const prevBtn = document.getElementById('prev');
+        const nextBtn = document.getElementById('next');
+        const slidesContainer = document.querySelector('.vidslides');
+        const slides = document.querySelectorAll('.vidslide');
+        const slideWidth = slides[0].clientWidth;
+        let currentIndex = 0;
 
-</div>
+        // Function to show the current slide
+        function showSlide(index) {
+            slidesContainer.style.transform = `translateX(-${index * slideWidth}px)`;
+        }
+
+        // Event listener for previous button
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
+            showSlide(currentIndex);
+        });
+
+        // Event listener for next button
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
+            showSlide(currentIndex);
+        });
+    </script>
 
 </body>
 </html>
