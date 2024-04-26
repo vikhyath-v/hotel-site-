@@ -4,7 +4,7 @@ function onHover(element) {
 
 
   function onBlur(element) {
-    element.style.backgroundColor = "#cffff9";
+    element.style.backgroundColor = "#eee";
   }
 
   

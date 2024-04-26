@@ -1,8 +1,55 @@
+@font-face {
+  font-family: 'oswald';
+  src: url('Oswald-VariableFont_wght.ttf');
+  font-family:'summer';
+  src: url('/Summer\ Dream\ Sans\ DEMO\ .ttf');
+}
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    background-color:#d5e9dd ;
     font-family: oswald;
+    margin: 0;
+    padding: 0;
   }
+  #one {
+    font-family: oswald;
+      background-color:  #11201e;
+      text-align: center;
+      color: #d5e9dd ;
+      padding: 20px;
+  }
+  #one img{
+      height: 100px;
+
+  }
+
+  #one h1 {
+      font-size: 50px;
+      color: #ccc;
+      font-family: summer;
+  }
+
+  #two {
+    display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color:   #154042 ;
+      padding: 5px;
+      border-radius: 10px;
+      height: 10.5vh;
+  }
+
+  #two a {
+      text-decoration: none;
+      color: #fff;
+      padding: 10px 20px;
+  } 
+  
+#home:hover{
+
+  color: #000000;
+}
   
   .container {
     max-width: 600px;
@@ -11,6 +58,7 @@ body {
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
+    
   }
 
   h1 {
@@ -28,6 +76,9 @@ body {
     display: block;
     font-weight: bold;
     margin-top: 10px;
+    margin-bottom: 10px;
+
+    
   }
 
   input[type="text"],
@@ -58,55 +109,7 @@ body {
     background-color: #ba5454;
    
   }
-@font-face {
-          font-family: 'oswald';
-          src: url('Oswald-VariableFont_wght.ttf');
-          font-family:'summer';
-          src: url('/Summer\ Dream\ Sans\ DEMO\ .ttf');
-      }
 
-      body {
-          margin: 0;
-          padding: 0;
-         
-          background-color: #f0f0f0;
-      }
+     
 
-      #one {
-        font-family: oswald;
-          background-color:  #11201e;
-          text-align: center;
-          color: #d5e9dd ;
-          padding: 20px;
-      }
-      #one img{
-          height: 100px;
-
-      }
-
-      #one h1 {
-          font-size: 50px;
-          color: #ccc;
-          font-family: summer;
-      }
-
-      #two {
-        display: flex;
-          justify-content: space-between;
-          align-items: center;
-          background-color:   #154042 ;
-          padding: 5px;
-          border-radius: 10px;
-          height: 10.5vh;
-      }
-
-      #two a {
-          text-decoration: none;
-          color: #fff;
-          padding: 10px 20px;
-      } 
-      
-    #home:hover{
     
-      color: #000000;
-    }
